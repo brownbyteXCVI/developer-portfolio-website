@@ -238,74 +238,94 @@ color: thistle;
 
  /* social links (Footer) */
 
-
-
-
-
 .social_container {
     background-image: linear-gradient(to left top, #1d2d44, #1b3045, #1a3346, #1a3646, #1c3946);   
-    height: 100px;
+    height: 120px;
     width: 100%;
     position: relative;
     
 }
 
-.tribute_container {
+
+  ul {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 70px;
+    height: 70px;
+    background-color: thistle;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 20px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    /*border: 3px solid ; */
+    z-index: 1;
+  }
+  
+  ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  ul li a:hover:before {
+    top: 0;
+  }
+  
+  ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  ul li:nth-child(2) a:before{
+    background: #0077b5;
+  }
+  
+  ul li:nth-child(3) a:before {
+    background: black;
+  }
+  
+  ul li:nth-child(4) a:before {
+    background: #E2432A;
+  }
+
+  /* Tribute (bottom footer) */
+
+  .tribute_container {
     background-image: linear-gradient(to top, #091018, #08121a, #07131c, #05151d, #03161f);       
     height: 80px;
     width: 100%;
 }
-
-.social_links{
-
-   position:absolute;
-   left: 40%;
-   top: 40%;
-   margin: -25px 0 0 -25px;
-
-}
-
-
-
-/* Tribute (bottom footer*/
-
-.fa {
-    padding: 20px;
-    font-size: 20px !important;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-   
-    margin: 5px 10px;
-    border-radius: 50%;
-  }
-
-  .fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-  
-}
-
-.fa-linkedin{
-    background: #007bb5;
-    color: white;
-}
-
-
-.fa-github{
-    background: black;
-    color: white;
-  }
-
-  .fa-gitlab{
-    background: #E2432A;
-    color: white;
-  }
-
 
 
                                                         /* JS Libraries */
